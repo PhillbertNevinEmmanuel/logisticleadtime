@@ -21,7 +21,7 @@ SELECT
 	ROUND(alt.avg_leadtime, 1) average_leadtime_hh,
 	alt.tracking_number fastest_tracking_number
 FROM averageLeadtime alt
-WHERE rn = 1
+WHERE rn = 1;
 
 /* 2. Top 5 Fastest Tracking Number and Top 5 Slowest Tracking Number */
 
@@ -49,7 +49,7 @@ SELECT
 	lto.leadtime_asc
 FROM leadtime_ordered lto
 WHERE lto.leadtime_asc BETWEEN 1 AND 5 OR lto.leadtime_desc between 1 AND 5
-ORDER BY lto.leadtime_asc
+ORDER BY lto.leadtime_asc;
 
 /* 3. Delivery-time Distribution in Histogram Buckets */
 
